@@ -1,0 +1,770 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #dc143c 0%, #b22222 100%);
+    color: white;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.club-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-shield {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+    font-weight: bold;
+    color: #dc143c;
+    font-size: 14px;
+}
+
+.club-name h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+.club-years {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-1px);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(220, 20, 60, 0.8), rgba(178, 34, 34, 0.8)), 
+                url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&h=600&fit=crop') center/cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Featured News Section */
+.featured-news {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.news-card.featured {
+    grid-column: span 2;
+}
+
+.news-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-content h3 {
+    margin-bottom: 15px;
+}
+
+.news-content h3 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.news-content h3 a:hover {
+    color: #dc143c;
+}
+
+.news-content p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #dc143c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.page-link {
+    padding: 8px 12px;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover,
+.page-link.active {
+    background: #dc143c;
+    color: white;
+    border-color: #dc143c;
+}
+
+/* Info Section */
+.info-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.section-title {
+    background: #dc143c;
+    color: white;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.info-content h4 {
+    color: #dc143c;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.info-article {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-article img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.article-info h5 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.article-info h5 a:hover {
+    color: #dc143c;
+}
+
+.date {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.related-articles {
+    margin-top: 20px;
+}
+
+.mini-article {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mini-article img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.mini-content h6 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.mini-content h6 a:hover {
+    color: #dc143c;
+}
+
+.partnership-info {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.partnership-info h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.partnership-info a {
+    color: #dc143c;
+    text-decoration: none;
+}
+
+.partnership-info a:hover {
+    text-decoration: underline;
+}
+
+/* Matches Section */
+.matches-section {
+    margin-bottom: 30px;
+}
+
+.match-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.match-date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.match-score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dc143c;
+    margin-bottom: 10px;
+}
+
+.match-time {
+    font-size: 20px;
+    font-weight: bold;
+    color: #dc143c;
+    margin-bottom: 10px;
+}
+
+.tournament {
+    color: #666;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.match-info h4 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.match-info h4 a:hover {
+    color: #dc143c;
+}
+
+.social-section {
+    margin-top: 30px;
+}
+
+.twitter-link {
+    display: inline-block;
+    background: #1da1f2;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.twitter-link:hover {
+    background: #0d8bd9;
+}
+
+/* Video Section */
+.video-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.video-container {
+    text-align: center;
+}
+
+.subscribe-link {
+    display: inline-block;
+    background: #ff0000;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    transition: background 0.3s ease;
+}
+
+.subscribe-link:hover {
+    background: #cc0000;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.video-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(220, 20, 60, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.play-button:hover {
+    background: rgba(220, 20, 60, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-item p {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.video-pagination {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Club News Section */
+.club-news {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #dc143c 0%, #b22222 100%);
+    color: white;
+}
+
+.club-news .section-title {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.club-news .news-card {
+    background: white;
+    color: #333;
+}
+
+.news-meta {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Sponsors Section */
+.sponsors-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #dc143c 0%, #b22222 100%);
+    color: white;
+}
+
+.sponsors-section .section-title {
+    text-align: center;
+    background: none;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.sponsor-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-item:hover {
+    transform: translateY(-5px);
+}
+
+.sponsor-item img {
+    max-width: 100%;
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.sponsor-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: #dc143c;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #dc143c;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+    
+    .nav-list a {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .hero-content h2 {
+        font-size: 32px;
+    }
+    
+    .club-name h1 {
+        font-size: 20px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-card.featured {
+        grid-column: span 1;
+    }
+    
+    .info-article {
+        flex-direction: column;
+    }
+    
+    .info-article img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .club-logo {
+        gap: 10px;
+    }
+    
+    .logo-shield {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .club-name h1 {
+        font-size: 18px;
+    }
+    
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mini-article {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mini-article img {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-card,
+.match-card,
+.video-item {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #dc143c;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .video-section,
+    .sponsors-section {
+        display: none;
+    }
+    
+    .news-card {
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+}
